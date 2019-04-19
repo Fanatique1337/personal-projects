@@ -13,13 +13,9 @@ def main():
 
     valid_keys = [key.strip() for key in valid_keys]
 
-    # print(valid_keys)
-
     teams = {}
     for line in results[1:]:
         line = line.split('\t')
-        # print(line[KEY_INDEX])
-        # print(line)
         if check_key_if_valid(valid_keys, line[KEY_INDEX]):
             for team in line[2:]:
                 team = team.strip()
